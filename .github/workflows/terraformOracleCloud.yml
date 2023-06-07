@@ -47,6 +47,7 @@ name: 'Terraform'
 on:
   push:
     branches: [ "main" ]
+    paths: .\OracleCloud\**
   pull_request:
 
 permissions:
@@ -84,7 +85,7 @@ jobs:
 
     - name: Update GitHub comments
       uses: actions/github-script@v6.4.1
-      if: ( github.event_name == 'pull_request' || github.event_name == 'push' )
+      if:  github.event_name == 'pull_request' #|| github.event_name == 'push' )
       env:
         PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
       with:
