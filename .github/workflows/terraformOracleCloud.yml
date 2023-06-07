@@ -84,7 +84,7 @@ jobs:
 
     - name: Update GitHub comments
       uses: actions/github-script@v6
-      if: github.event_name == 'pull_request'
+      if: ( github.event_name == 'pull_request' || github.event_name == 'push' )
       env:
         PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
       with:
