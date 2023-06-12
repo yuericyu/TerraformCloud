@@ -1,0 +1,13 @@
+tenancy_ocid = ""
+
+user_ocid = ""
+
+fingerprint = ""
+
+compartment_ocid = ""
+
+region = ""
+
+private_key_path = "C:\\Users\\xxx\\xxx\\keyfile.pem"
+
+ssh_public_key = ""
